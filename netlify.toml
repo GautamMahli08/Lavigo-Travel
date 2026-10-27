@@ -1,0 +1,16 @@
+# Netlify settings: publish the ready-made website in site/ (no build step on Netlify).
+# To update the site: run `python build_lavigo.py` on your computer, then commit and push.
+[build]
+  publish = "site"
+  command = ""
+
+# Cache images, fonts, CSS and JS for a week; always re-check pages
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
