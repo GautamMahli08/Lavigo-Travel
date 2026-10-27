@@ -1,0 +1,6 @@
+# Raw download of the old website: very large, not ours to publish, not needed for the live site
+original-scrape/
+
+# Python cache
+__pycache__/
+*.pyc

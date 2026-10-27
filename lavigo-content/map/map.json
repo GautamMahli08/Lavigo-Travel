@@ -1,0 +1,142 @@
+{
+ "viewBox": [
+  600.0,
+  398.2
+ ],
+ "towns": {
+  "Shimla": [
+   12.93,
+   30.88
+  ],
+  "Dharamshala": [
+   9.26,
+   22.53
+  ],
+  "Rishikesh": [
+   17.66,
+   38.41
+  ],
+  "Nainital": [
+   21.28,
+   43.13
+  ],
+  "Kathmandu": [
+   31.28,
+   53.33
+  ],
+  "Pokhara": [
+   27.5,
+   47.82
+  ],
+  "Lukla": [
+   38.81,
+   51.97
+  ],
+  "Pelling": [
+   53.77,
+   61.9
+  ],
+  "Kalimpong": [
+   61.12,
+   70.27
+  ],
+  "Siliguri": [
+   59.97,
+   78.7
+  ],
+  "Mangan": [
+   62.39,
+   54.21
+  ],
+  "Lachung": [
+   66.59,
+   48.48
+  ],
+  "Paro": [
+   76.9,
+   57.6
+  ],
+  "Punakha": [
+   81.43,
+   53.95
+  ]
+ },
+ "pointers": {
+  "nepal": [
+   31.28,
+   53.33
+  ],
+  "gangtok": [
+   64.6,
+   61.15
+  ],
+  "darjeeling": [
+   58.41,
+   71.28
+  ],
+  "manali": [
+   13.01,
+   22.38
+  ],
+  "lachen-and-lachung": [
+   62.85,
+   47.26
+  ],
+  "pelling": [
+   52.42,
+   59.81
+  ],
+  "bhutan": [
+   79.41,
+   56.58
+  ],
+  "everest-base-camp": [
+   40.29,
+   44.97
+  ]
+ },
+ "labels": {
+  "Himachal Pradesh": [
+   14.78,
+   27.15
+  ],
+  "Uttarakhand": [
+   21.67,
+   36.84
+  ],
+  "Nepal": [
+   27.77,
+   45.4
+  ]
+ },
+ "context": {
+  "country_viewBox": [
+   112.0,
+   124.8
+  ],
+  "region_center_pct": [
+   53.29,
+   23.82
+  ],
+  "region_height_pct": 22.89,
+  "region_aspect": 2.22,
+  "zoom_dots": {
+   "Manali": [
+    9.7,
+    14.7
+   ],
+   "Kathmandu": [
+    58.8,
+    80.3
+   ],
+   "Gangtok": [
+    78.7,
+    85.8
+   ],
+   "Thimphu": [
+    85.0,
+    83.8
+   ]
+  }
+ }
+}

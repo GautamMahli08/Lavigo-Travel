@@ -1,0 +1,149 @@
+/* LAVIGO additions: trip pages, about page, WhatsApp. Uses the site's own palette and fonts. */
+
+.lavigo-section { padding: 6em 0; position: relative; z-index: 2; }
+.lavigo-places .lavigo-heading { margin-bottom: -5em; padding-top: 3em; position: relative; z-index: 3; }
+.lavigo-section.tight { padding: 4em 0; }
+.lavigo-heading { text-align: center; margin-bottom: 3em; }
+
+/* key facts */
+.lavigo-facts { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid #c8cfc3; border-bottom: 1px solid #c8cfc3; }
+.lavigo-fact { padding: 1.75em 1.5em; border-left: 1px solid #c8cfc3; }
+.lavigo-fact:first-child { border-left: none; }
+.lavigo-fact .k { font-size: 81.25%; text-transform: uppercase; letter-spacing: .08em; color: #2d540e; }
+.lavigo-fact .v { font-family: 'Montaga', Arial, sans-serif; font-size: 162.5%; color: #1c300c; margin-top: .35em; line-height: 1.15em; }
+.lavigo-fact .v small { font-family: 'Montreal-Serial', Arial, sans-serif; font-size: 50%; display: block; margin-top: .4em; color: #333; line-height: 1.4em; }
+
+/* lists */
+.lavigo-list { list-style: none; padding: 0; margin: 0; }
+.lavigo-list li { position: relative; padding: .55em 0 .55em 2em; line-height: 1.5em; }
+.lavigo-list li:before { content: ""; position: absolute; left: 0; top: 1em; width: .55em; height: .55em; border-radius: 50%; background: #2d540e; }
+.lavigo-list.yes li:before, .lavigo-list.no li:before { width: 1.25em; height: 1.25em; top: .7em; background: none; border: 1px solid #2d540e;
+  font-size: 90%; line-height: 1.25em; text-align: center; color: #2d540e; }
+.lavigo-list.yes li:before { content: "\2713"; }
+.lavigo-list.no li:before { content: "\2715"; border-color: #8a8f87; color: #8a8f87; }
+.lavigo-highlights { columns: 2; column-gap: 4em; }
+.lavigo-highlights li { break-inside: avoid; }
+
+/* day by day */
+.lavigo-days { max-width: 52em; margin: 0 auto; }
+.lavigo-day { display: flex; gap: 2em; padding: 1.75em 0; border-bottom: 1px solid #c8cfc3; }
+.lavigo-day:last-child { border-bottom: none; }
+.lavigo-day .n { flex: 0 0 5.5em; height: 5.5em; border-radius: 50%; border: 1px solid #2d540e; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; color: #2d540e; text-transform: uppercase; font-size: 81.25%; letter-spacing: .08em; }
+.lavigo-day .n b { font-family: 'Montaga', Arial, sans-serif; font-size: 200%; font-weight: normal; letter-spacing: 0; line-height: 1.1em; }
+.lavigo-day h3 { font-family: 'Montaga', Arial, sans-serif; font-weight: normal; font-size: 137.5%; color: #1c300c; margin: .3em 0 .5em; }
+
+/* included / not included */
+.lavigo-two { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+.lavigo-two > div { padding: 0 3em; }
+.lavigo-two > div + div { border-left: 1px solid #fff; }
+
+/* calculator */
+.lavigo-calc { display: grid; grid-template-columns: 1.2fr 1fr; gap: 3em; align-items: start; }
+.lavigo-calc .wpcf7 label + label { margin-top: 1.25em; }
+.lavigo-calc .lbl { display: block; font-size: 81.25%; margin-bottom: .5em; color: #1c300c; }
+.lavigo-stepper { display: flex; align-items: stretch; border: .175em solid #1c300c; background: #fff; }
+.lavigo-stepper button { width: 3em; cursor: pointer; background: #fff; color: #1c300c; border: none; font-size: 125%; transition: background-color .25s, color .25s; }
+.lavigo-stepper button:hover { background: #2d540e; color: #fff; }
+.lavigo-stepper input { flex: 1; text-align: center; border: none !important; font-size: 100% !important; padding: .6em 0 !important; -moz-appearance: textfield; }
+.lavigo-stepper input::-webkit-outer-spin-button, .lavigo-stepper input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.lavigo-stepper .price { align-self: center; padding: 0 1em; font-size: 81.25%; white-space: nowrap; color: #2d540e; }
+.lavigo-summary { background: #fff; padding: 2.5em; box-shadow: 0 1em 3em rgba(0, 0, 0, .12); }
+.lavigo-summary .row { display: flex; justify-content: space-between; gap: 1em; padding: .6em 0; border-bottom: 1px solid #e1e5de; font-size: 93.75%; }
+.lavigo-summary .total { display: flex; justify-content: space-between; align-items: baseline; padding-top: 1.25em; color: #1c300c; }
+.lavigo-summary .total b { font-family: 'Montaga', Arial, sans-serif; font-weight: normal; font-size: 225%; }
+.lavigo-summary .note { font-size: 75%; color: #555; margin-top: 1em; line-height: 1.5em; }
+.lavigo-wa-btn { display: flex; align-items: center; justify-content: center; gap: .75em; margin-top: 1.75em; padding: 1em 1.5em; border-radius: 2em;
+  background: #1c300c; color: #fff !important; text-decoration: none; text-transform: uppercase; letter-spacing: .08em; font-size: 87.5%;
+  transition: background-color .25s; }
+.lavigo-wa-btn:hover { background: #2d540e; }
+.lavigo-wa-btn svg { width: 1.5em; height: 1.5em; fill: currentColor; }
+
+/* floating WhatsApp button */
+.lavigo-wa-float { position: fixed; right: 1.5em; bottom: 1.5em; z-index: 6; width: 3.5em; height: 3.5em; border-radius: 50%; background: #25d366;
+  display: flex; align-items: center; justify-content: center; box-shadow: 0 .5em 1.5em rgba(0, 0, 0, .25); transition: transform .25s; }
+.lavigo-wa-float:hover { transform: scale(1.08); }
+.lavigo-wa-float svg { width: 55%; height: 55%; fill: #fff; }
+
+/* trip cards (second line under the title) */
+.lavigo-card-sub { margin-top: .6em; font-size: 87.5%; letter-spacing: .04em; }
+
+@media screen and (max-width: 900px) {
+  .lavigo-section { padding: 3.5em 0; }
+  .lavigo-section > .centered-midwide { width: auto; padding: 0 1.25em; box-sizing: border-box; }
+  .lavigo-facts { grid-template-columns: 1fr 1fr; }
+  .lavigo-fact:nth-child(3) { border-left: none; }
+  .lavigo-fact:nth-child(n+3) { border-top: 1px solid #c8cfc3; }
+  .lavigo-highlights { columns: 1; }
+  .lavigo-two, .lavigo-calc { grid-template-columns: 1fr; gap: 2em; }
+  .lavigo-two > div { padding: 0; }
+  .lavigo-two > div + div { border-left: none; border-top: 1px solid #fff; padding-top: 2em; }
+  .lavigo-day { gap: 1.25em; }
+  .lavigo-day .n { flex-basis: 4.5em; height: 4.5em; }
+  .lavigo-summary { padding: 1.5em; }
+}
+
+/* home page: square tag showing the section in view */
+.lavigo-tag { position: fixed; left: 1.5em; bottom: 1.5em; z-index: 6; display: flex; align-items: stretch; background: #1c300c; color: #fff;
+  text-transform: uppercase; letter-spacing: .12em; font-size: 75%; box-shadow: 0 .5em 1.5em rgba(0, 0, 0, .25); pointer-events: none;
+  opacity: 0; transform: translateY(1em); transition: opacity .4s, transform .4s; }
+.lavigo-tag.on { opacity: 1; transform: none; }
+.lavigo-tag .num { background: #2d540e; padding: .9em 1em; font-family: 'Montaga', Arial, sans-serif; letter-spacing: .05em; font-size: 120%; line-height: 1em; }
+.lavigo-tag .name { padding: .9em 1.25em; line-height: 1.2em; display: flex; align-items: center; transition: opacity .25s; }
+.lavigo-tag .name.swap { opacity: 0; }
+@media screen and (max-width: 900px) { .lavigo-tag { left: 1em; bottom: 1.25em; font-size: 68%; } }
+
+/* home page: call to action */
+.lavigo-cta { text-align: center; }
+.lavigo-cta .lead { max-width: 38em; margin: 0 auto; }
+.lavigo-cta-trips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5em; margin: 3em 0 2.5em; text-align: left; }
+.lavigo-cta-trip { display: block; background: #fff; color: inherit !important; text-decoration: none; box-shadow: 0 1em 2.5em rgba(0, 0, 0, .1);
+  transition: transform .35s, box-shadow .35s; }
+.lavigo-cta-trip:hover { transform: translateY(-.4em); box-shadow: 0 1.5em 3em rgba(0, 0, 0, .16); }
+.lavigo-cta-trip .img { aspect-ratio: 4 / 3; background-size: cover; background-position: center; }
+.lavigo-cta-trip .txt { padding: 1.25em 1.25em 1.5em; }
+.lavigo-cta-trip .t { font-family: 'Montaga', Arial, sans-serif; font-size: 125%; color: #1c300c; line-height: 1.2em; }
+.lavigo-cta-trip .m { font-size: 81.25%; margin-top: .5em; color: #2d540e; }
+.lavigo-cta-btns { display: flex; justify-content: center; gap: 1.5em; flex-wrap: wrap; }
+.lavigo-cta-btns .lavigo-wa-btn { margin-top: 0; min-width: 14em; }
+.lavigo-btn-outline { background: transparent; border: 1px solid #1c300c; color: #1c300c !important; }
+.lavigo-btn-outline:hover { background: #1c300c; color: #fff !important; }
+@media screen and (max-width: 900px) { .lavigo-cta-trips { grid-template-columns: 1fr 1fr; gap: 1em; } }
+
+/* reviews */
+.lavigo-reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75em; }
+.lavigo-review { background: #fff; padding: 2em; box-shadow: 0 1em 2.5em rgba(0, 0, 0, .08); display: flex; flex-direction: column; }
+.lavigo-review .stars { color: #c9a227; letter-spacing: .15em; font-size: 110%; }
+.lavigo-review .q { font-family: 'Montaga', Arial, sans-serif; font-size: 112.5%; line-height: 1.5em; color: #1c300c; margin: 1em 0 1.5em; flex: 1; }
+.lavigo-review .q:before { content: "\201C"; font-size: 250%; line-height: 0; vertical-align: -.45em; margin-right: .1em; color: #2d540e; }
+.lavigo-review .who { display: flex; align-items: center; gap: .9em; }
+.lavigo-review .av { flex: 0 0 3em; height: 3em; border-radius: 50%; background: #2d540e center / cover no-repeat; color: #fff;
+  display: flex; align-items: center; justify-content: center; font-family: 'Montaga', Arial, sans-serif; font-size: 100%; }
+.lavigo-review .who b { display: block; font-weight: 600; color: #1c300c; }
+.lavigo-review .who small { display: block; font-size: 81.25%; color: #555; margin-top: .2em; }
+.lavigo-review .who small a { color: #2d540e; }
+
+/* custom trip form */
+.lavigo-custom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3em; text-align: left; }
+.lavigo-custom .lbl { display: block; font-size: 81.25%; margin-bottom: .5em; color: #1c300c; }
+.lavigo-custom label + label, .lavigo-custom .lavigo-two-inputs + label, .lavigo-custom label + .lavigo-two-inputs { margin-top: 1.25em; display: block; }
+.lavigo-two-inputs { display: grid; grid-template-columns: 1fr 1fr; gap: 1em; }
+.lavigo-two-inputs label + label { margin-top: 0 !important; }
+.lavigo-chips { display: flex; flex-wrap: wrap; gap: .6em; }
+.lavigo-chip { display: inline-block !important; width: auto !important; cursor: pointer; }
+.lavigo-chip input { position: absolute; opacity: 0; pointer-events: none; }
+.lavigo-chip span { display: inline-block; padding: .55em 1.1em; border: 1px solid #1c300c; border-radius: 2em; font-size: 81.25%; background: #fff;
+  transition: background-color .25s, color .25s; }
+.lavigo-chip input:checked + span { background: #1c300c; color: #fff; }
+.lavigo-chip:hover span { background: #e1e5de; }
+.lavigo-chip input:checked + span:hover { background: #2d540e; }
+.lavigo-custom select, .lavigo-custom textarea { width: 100%; }
+
+@media screen and (max-width: 900px) {
+  .lavigo-reviews, .lavigo-custom-grid { grid-template-columns: 1fr; gap: 1.5em; }
+}
+/* custom trip form fixes (the site's form CSS adds margins between labels) */
+.lavigo-chips .lavigo-chip { margin-top: 0 !important; }
+.lavigo-chip input:checked + span { background: #1c300c !important; color: #fff !important; }
+.lavigo-custom .lavigo-two-inputs { display: grid !important; grid-template-columns: 1fr 1fr; gap: 1em; }
+.lavigo-custom .lavigo-two-inputs > label { margin-top: 0 !important; }
